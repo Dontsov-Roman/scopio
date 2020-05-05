@@ -1,3 +1,31 @@
+@import '~@blueprintjs/core/lib/css/blueprint.css';
+
+@mixin column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+@mixin row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.column {
+  @include column();
+}
+.row {
+  @include row();
+}
+.country {
+  @include column();
+  align-items: center;
+}
+.country_list {
+  @include column();
+  align-items: center;
+}
+
+.custom_tooltip {
+  @include column();
+}
 .App {
   text-align: center;
 }
