@@ -1,7 +1,8 @@
 import React from 'react'
 import { LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts'
 import { dateFormat } from 'helpers/date'
-import { isEmpty } from 'lodash'
+import withEmptyScreen from 'hocs/withEmptyScreen'
+import EmptyScreen from 'components/EmptyScreen'
 import TooltipContent from './TooltipContent'
 
 const LastWeek = ({ data }) => {
@@ -18,4 +19,4 @@ const LastWeek = ({ data }) => {
   )
 }
 
-export default LastWeek
+export default withEmptyScreen({ EmptyScreen, isEmpty: ({ data }) => data.length < 1 })(LastWeek)

@@ -38,6 +38,12 @@
   @include column();
   align-items: center;
 }
+.empty_screen {
+  width: 600px;
+  margin-left: 15px;
+  @include column();
+  align-items: center;
+}
 .custom_tooltip {
   @include column();
 }
