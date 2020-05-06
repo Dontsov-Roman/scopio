@@ -21,8 +21,22 @@
 .country_list {
   @include column();
   align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+  & > .list {
+    @include row();
+    flex-wrap: wrap;
+    & > a {
+      width: 200px;
+    }
+  }
 }
-
+.last_week {
+  min-width: 600px;
+  margin-left: 15px;
+  @include column();
+  align-items: center;
+}
 .custom_tooltip {
   @include column();
 }

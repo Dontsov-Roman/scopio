@@ -1,11 +1,13 @@
 import React from 'react'
 import { LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts'
 import { dateFormat } from 'helpers/date'
+import { isEmpty } from 'lodash'
 import TooltipContent from './TooltipContent'
 
 const LastWeek = ({ data }) => {
   return (
     <div className="last_week">
+      <h4>Last week</h4>
       <LineChart width={730} height={250} data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
         <XAxis tickFormatter={dateFormat} dataKey="Date" />
         <YAxis dataKey="Cases" />

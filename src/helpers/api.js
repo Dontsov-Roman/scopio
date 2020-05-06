@@ -1,4 +1,3 @@
-import queryString from 'query-string'
 import routes from 'constants/routes'
 import { last } from 'lodash'
 
@@ -14,7 +13,7 @@ export default {
     return last(data)
   },
   getStatus: async (Slug, from, to) => {
-    const query = queryString.stringify({ from, to })
+    const query = `from=${from}&to=${to}`
     const url = routes.covid19Api.replace('{Slug}', Slug)
     const response = await fetch(query ? `${url}?${query}` : url)
     return response.json()
