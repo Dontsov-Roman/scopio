@@ -25,6 +25,7 @@
   margin-top: 20px;
   & > .list {
     @include row();
+    margin-top: 20px;
     flex-wrap: wrap;
     & > a {
       width: 200px;
