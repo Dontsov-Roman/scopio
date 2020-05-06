@@ -6,7 +6,7 @@ import { getData } from './selector'
 
 function* getAll() {
   try {
-    yield put(actions.search())
+    yield put(actions.search(''))
     const oldData = yield select(getData)
     if (isEmpty(oldData)) {
       const data = yield api.getCountries()
