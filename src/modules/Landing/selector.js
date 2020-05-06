@@ -13,8 +13,8 @@ export const getFiltered = createSelector(getData, getSearch, (data, search) =>
 
 const getAll = (state) => {
   const {
-    [NAME]: { fetching },
+    [NAME]: { fetching, search },
   } = state
-  return { data: getFiltered(state), fetching }
+  return { data: getFiltered(state), fetching, search }
 }
 export default connect(getAll, { onMount: actions.get.request, onSearch: actions.search })
